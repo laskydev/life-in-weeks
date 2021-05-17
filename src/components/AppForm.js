@@ -31,7 +31,8 @@ export const AppForm = () => {
 		const actualDate = new Date();
 		const birth = new Date(birthDay);
 		const yearsLiving = actualDate.getFullYear() - birth.getFullYear();
-		const monthsLiving = yearsLiving * 12;
+		let monthsLiving = Math.round(((((((actualDate.getTime() - birth.getTime())/1000)/60)/60)/24)))
+		monthsLiving = Math.round(monthsLiving/30.417)
 		return setLifeState({
 			...lifeState,
 			years: yearsLiving,
@@ -105,7 +106,7 @@ export const AppForm = () => {
 			/>
 			<input
 				type={"submit"}
-				className={"bg-white py-2 px-8 mt-3"}
+				className={"bg-white py-2 px-8 mt-3 cursor-pointer"}
 				value={"Calcular"}
 			/>
 			{error && (
