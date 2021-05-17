@@ -9,7 +9,7 @@ import {Years} from "./screens/Years";
 export const MainApp = () => {
     return (
         <AppState>
-            <div className={'w-screen min-h-screen	 bg-gradient-to-br from-purple-700  to-purple-500 p-3  mx-auto  '}>
+            <div className={'w-screen min-h-screen	 bg-gradient-to-br from-purple-700  to-purple-500   mx-auto  '}>
                 <Router>
                     <Switch>
                         <Route exact path={'/'} component={HomeScreen}/>
